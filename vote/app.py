@@ -7,6 +7,7 @@ import json
 
 option_a = os.getenv('OPTION_A', "Cats")
 option_b = os.getenv('OPTION_B', "Dogs")
+option_c = os.getenv('OPTION_C', "Birds")
 redis_password = os.getenv('redis_password', "Dogs")
 hostname = socket.gethostname()
 
@@ -35,6 +36,7 @@ def hello():
         'index.html',
         option_a=option_a,
         option_b=option_b,
+        option_c=option_c,
         hostname=hostname,
         vote=vote,
     ))
