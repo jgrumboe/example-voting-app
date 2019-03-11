@@ -11,7 +11,7 @@ WORKDIR /code
 ADD pom.xml /code/pom.xml
 ADD settings.xml /code/settings.xml
 
-RUN ["mvn", "dependency:resolve","-s settings.xml Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true"]
+RUN ["mvn", "dependency:resolve","-s settings.xml -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true"]
 RUN ["mvn", "verify","-s settings.xml -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true -Dmaven.wagon.http.ssl.ignore.validity.dates=true"]
 
 # Adding source, compile and package into a fat jar
