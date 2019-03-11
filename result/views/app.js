@@ -15,7 +15,7 @@ app.controller('statsCtrl', function($scope){
        data = JSON.parse(json);
        var a = parseInt(data.a || 0);
        var b = parseInt(data.b || 0);
-       var c = parseInt(data.b || 0);
+       var c = parseInt(data.c || 0);
 
        var percentages = getPercentages(a, b, c);
 
