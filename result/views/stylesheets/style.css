@@ -81,11 +81,11 @@ body{
 }
 
 #choice .choice{
-  width: 49%;
+  width: 33%;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  text-align: left;
+  text-align: left
   padding-left: 50px;
 }
 
@@ -95,13 +95,19 @@ body{
 
 #choice .choice.dogs{
   color: #00cbca;
-  float: right;
+  float: left;
 }
 
 #choice .choice.cats{
   color: #2196f3;
   float: left;
 }
+
+#choice .choice.birds{
+  color: #ffcc00;
+  float: left;
+}
+
 #background-stats{
   z-index:1;
   height:100%;
