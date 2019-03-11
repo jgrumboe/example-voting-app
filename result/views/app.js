@@ -6,9 +6,9 @@ var bg2 = document.getElementById('background-stats-2');
 var bg3 = document.getElementById('background-stats-3');
 
 app.controller('statsCtrl', function($scope){
-  $scope.aPercent = 33.33333;
-  $scope.bPercent = 33.33333;
-  $scope.cPercent = 33.33333;
+  $scope.aPercent = 0;
+  $scope.bPercent = 0;
+  $scope.cPercent = 0;
 
   var updateScores = function(){
     socket.on('scores', function (json) {
@@ -19,9 +19,9 @@ app.controller('statsCtrl', function($scope){
 
        var percentages = getPercentages(a, b, c);
 
-       bg1.style.width = percentages.a + "%";
-       bg2.style.width = percentages.b + "%";
-       bg3.style.width = percentages.c + "%";
+       bg1.style.width = percentages.a.toPrecision(1) + "%";
+       bg2.style.width = percentages.b.toPrecision(1) + "%";
+       bg3.style.width = percentages.c.toPrecision(1) + "%";
 
        $scope.$apply(function () {
          $scope.aPercent = percentages.a;
@@ -45,11 +45,11 @@ function getPercentages(a, b, c) {
   var result = {};
 
   if (a + b + c > 0) {
-    result.a = Math.round(a / (a + b + c) * 100);
-    result.b = Math.round(b / (a + b + c) * 100);
-    result.c = Math.round(c / (a + b + c) * 100);
+    result.a = a / (a + b + c) * 100;
+    result.b = b / (a + b + c) * 100;
+    result.c = c / (a + b + c) * 100;
   } else {
-    result.a = result.b = result.c = 33.33333333;
+    result.a = result.b = result.c = 0;
   }
 
   return result;
