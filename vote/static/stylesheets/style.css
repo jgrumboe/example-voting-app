@@ -36,7 +36,7 @@ button.b{
 }
 
 button.c{
-  background-color: #00cbca;
+  background-color: #ffcc00;
 }
 
 #tip{
@@ -111,7 +111,7 @@ button.c{
 }
 
 #choice button.c:hover{
-  background-color: #00a2a1;
+  background-color: #e6b800;
 }
 
 
@@ -124,7 +124,7 @@ button.c{
 }
 
 #choice button.c:focus{
-  background-color: #00a2a1;
+  background-color: #e6b800;
 }
 
 #background-stats{
