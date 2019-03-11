@@ -55,7 +55,7 @@ body{
   z-index: 3;
   position: absolute;
   bottom: 40px;
-  right: 20px;
+  left: 20px;
   color: #fff;
   opacity: 0.5;
   font-size: 45px;
