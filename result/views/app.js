@@ -19,9 +19,9 @@ app.controller('statsCtrl', function($scope){
 
        var percentages = getPercentages(a, b, c);
 
-       bg1.style.width = percentages.a.toPrecision(1) + "%";
-       bg2.style.width = percentages.b.toPrecision(1) + "%";
-       bg3.style.width = percentages.c.toPrecision(1) + "%";
+       bg1.style.width = percentages.a.toPrecision(0) + "%";
+       bg2.style.width = percentages.b.toPrecision(0) + "%";
+       bg3.style.width = percentages.c.toPrecision(0) + "%";
 
        $scope.$apply(function () {
          $scope.aPercent = percentages.a;
